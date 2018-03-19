@@ -1,6 +1,6 @@
-<SuShe_01_1F_3>show running-config 
+<SuShe_01_1F_3>show running-config
 !rem this is dipu swap   
-!rem the vlan 27 not delete, but it not effect.
+!rem the vlan 27 not delete, but it not effect. 
 conf-mode
 !
 !
@@ -267,4 +267,42 @@ interface gige0_45
  switchport trunk allowed vlan 2-169,999 native vlan 999
 loopback-detection control enable
 loopback-detection action shutdown 
+!
+interface gige0_46
+ switchport access vlan 401
+loopback-detection control enable
+loopback-detection action shutdown 
+!
+interface gige0_47
+ switchport access vlan 401
+loopback-detection control enable
+loopback-detection action shutdown 
+!
+interface gige0_48
+ switchport trunk allowed vlan 1-4094 native vlan 1
+loopback-detection control enable
+loopback-detection action shutdown 
+!
+interface gige0_49
+loopback-detection control enable
+loopback-detection action shutdown 
+!
+interface gige0_50
+loopback-detection control enable
+loopback-detection action shutdown 
+!
+interface gige0_51
+ switchport trunk allowed vlan 1-169,999 native vlan 1
+loopback-detection control enable
+loopback-detection action shutdown 
+!
+ip route 0.0.0.0 0.0.0.0 vlan-if999 10.252.0.1
+!         
+
+web-authentication enable
+!
+loopback-detection enable
+loopback-detection interval-time 10 
+loopback-detection recover enable 
+loopback-detection recover-time 120 
 !
